@@ -26,7 +26,7 @@
         </ul>
         
         </nav>
-        <button class="mobile-menu-open" type="button">
+        <button class="mobile-menu-open js-open-menu"  type="button">
             <svg class="mobile-menu-open_icon" width="32" height="22">
                 <use href="./images/icons.svg#icon-hamburger"></use>
             </svg>
@@ -35,23 +35,83 @@
             
         <ul class="mail-list list">
            
-            <li ><a class="header-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a class="header-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+            <li class="mail-item" ><a class="header-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li class="tel-item"><a class="header-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
         
         </ul>
         </address>
     </div>
+    <!-- /* Mobile MENU */ -->
+    <div class="mobile-menu menu-container js-menu-container" >
+        <div class="container mobile_menu-container ">
+<button class="mobile_close-btn js-close-menu menu-toggle" >
+<svg class="mobile-menu_close-icon" width="8" height="8">
+<use href="./images/icons.svg#icon-modal-cross1"></use>
+</svg>
+</button>
+<ul class="mobile_modal-menu list">
+    <li class="mobile_modal-item"><a class="mobile_modal-link link current" href="./index.html">Studio</a>
+    </li>
+    <li class="mobile_modal-item"><a class="mobile_modal-link link" href="./portfolio.html">Portfolio</a>
+    </li>
+    <li class="mobile_modal-item"><a class="mobile_modal-link link" href="">Contacts</a>
+    </li>
+    
+</ul>
+<div class="mobile-wrapper">
+<ul class="mobile_cont-list list">
+    <li class="mobile_cont-item">
+        <a class="mobile-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a></li> 
+    </li>
+    <li class="mobile_cont-item">
+        <a class="mobile-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+    </li>
+</ul>
+<!-- Social -->
+<ul class="mobile_social-list list">
+    <li class="mobile_social-item">
+        <a class="mobile-social link" href="">
+            <svg class="mobile-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="mobile_social-item">
+        <a class="mobile-social link" href="">
+            <svg class="mobile-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="mobile_social-item">
+        <a class="mobile-social link" href="">
+            <svg class="mobile-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="mobile_social-item">
+        <a class="mobile-social link" href="">
+            <svg class="mobile-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+        </a>
+    </li>
+</ul>
+</div>
+</div>
+    </div>
     </header>
     <main>
         <!-- Hero -->
-        <!-- <section class="hero-section">
+        <section class="hero-section">
             <div class="container">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
             <button class="hero-button" type="button" data-modal-open>Order Service</button>
         </div>
-        </section> -->
+        </section>
         <!-- /* Section advantages */ -->
-    <!-- <section class="section-adv">
+    <section class="section-adv">
 
         <div class="container">
             <h2 class="title-adv visually-hidden">Advantages</h2>
@@ -97,22 +157,38 @@
                 </li>
             </ul>
         </div>
-    </section> -->
+    </section>
     <!-- Section What are we doing (wawd) -->
-    <!-- <section class="section-wawd">
+    <section class="section-wawd">
         <div class="container">
             <h2 class="title-wawd">What are we doing</h2>
             <ul class="img-list list">
-            <li class="image-item"><img src="./images/main-page/screen.jpg" alt="Computer screen" width="360"></li>
-            <li class="image-item"><img src="./images/main-page/phones.jpg" alt="Phone screen with layers" width="360"></li>
-            <li class="image-item"><img src="./images/main-page/arm-and-phone.jpg" alt="Arm with a phone" width="360"></li>
+            <li class="image-item">
+                <picture>
+                    <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/desktop/rectangle-71-(4)_result.webp 1x, ./images/desktop/Rectangle71@2_2result.webp 2x"
+                    type="image/webp">
+                    <source 
+                    srcset="./images/desktop/Rectangle71@2-2_result_result.jpg 1x, ./images/desktop/rectangle-71-(4).jpg 2x"
+                    media="(min-width: 1200px)"
+                    >
+                <img src="./images/main-page/screen.jpg" alt="Computer screen" width="360">
+            </picture>
+            </li>
+            <li class="image-item">
+                <img src="./images/main-page/phones.jpg" alt="Phone screen with layers" width="360">
+            </li>
+            <li class="image-item">
+                <img src="./images/main-page/arm-and-phone.jpg" alt="Arm with a phone" width="360">
+            </li>
             </ul>
         </div>
-    </section> -->
+    </section>
     <!-- Section Our Team -->
-        <!-- <section class="section-team section">
+        <section class="section-team section">
 
-        <div class="container">
+        <div class="team-cont container">
             <h2 class="title-team">Our Team</h2>
             <ul class="team-list list">
                 <li class="item-team"><img src="./images/main-page/productdesigner1.jpg" alt="product designer" width="264">
@@ -225,10 +301,10 @@
                     </div></li>
             </ul>
         </div>
-        </section> -->
+        </section>
         <!-- Customers -->
-        <!-- <section class="customers">
-            <div class="container">
+        <section class="customers">
+            <div class="customers-cont container">
             <h2 class="title-team">Customers</h2>
             <ul class="customers-list list">
                 <li class="customers-item">
@@ -275,11 +351,11 @@
                 </li>
             </ul>
         </div>
-        </section> -->
+        </section>
         </main>
 
         <!-- Footer -->
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="footer-container container">
                 <div class="footer-div">
                 <a class="footer-logo link" href="./index.html">Web<span class="logo-foot">Studio</span></a>
@@ -334,9 +410,9 @@
             </div>
             </div>
 
-        </footer> -->
+        </footer>
         <!-- Modal window  -->
-      <!-- <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-button" data-modal-close>
 <svg class="modal-close-button-icon" width="8" height="8">
@@ -390,6 +466,14 @@
 </form>
         </div>
       </div>       
-      <script src="./js/modal.js"></script>               -->
+      <script src="./js/modal.js"></script>              
+      
+      <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
 </body> 
 </html>
